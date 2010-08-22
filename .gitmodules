@@ -7,3 +7,9 @@
 [submodule "vim/bundle/snipmate.vim"]
 	path = vim/bundle/snipmate.vim
 	url = http://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/Command-T"]
+	path = vim/bundle/Command-T
+	url = http://github.com/wincent/Command-T.git
+[submodule "vim/bundle/vim-bufexplorer"]
+	path = vim/bundle/vim-bufexplorer
+	url = http://github.com/bronson/vim-bufexplorer.git
