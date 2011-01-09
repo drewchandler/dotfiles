@@ -7,14 +7,19 @@ colorscheme wombat
 filetype indent plugin on
 syntax on
 
-set guioptions-=T "No toolbar in gvim
-set guifont=Menlo\ Regular:h12
+if has("gui_running")
+  set guioptions-=T "No toolbar in gvim
+  set guifont=Menlo\ Regular:h12
+endif
 
 set vb "Visual bell
 set incsearch "Go to the first match as we search
 set nowrap "No line wrapping
 set wildmode=list:longest "Make cmdline tab completion similar to bash
 set wildmenu "Enable ctrl-n and ctrl-p to scroll thru matches
+set showcmd " display incomplete commands
+set ruler " show the cursor position all the time
+set laststatus=2
 
 set expandtab "use spaces instead of tabstops
 set smarttab
