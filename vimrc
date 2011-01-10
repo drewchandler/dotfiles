@@ -19,6 +19,7 @@ set wildmode=list:longest "Make cmdline tab completion similar to bash
 set wildmenu "Enable ctrl-n and ctrl-p to scroll thru matches
 set showcmd " display incomplete commands
 set ruler " show the cursor position all the time
+set number "show line numbers
 set laststatus=2
 
 set expandtab "use spaces instead of tabstops
@@ -31,10 +32,12 @@ set list listchars=tab:>-,trail:.,extends:>,precedes:<
 let mapleader=","
 
 nmap <leader>wt :%s/\s\+$//<cr> "Remove trailing whitespace
+nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
+nmap <leader>p :set paste!<cr>
 
 "--- PLUGIN SPECIFIC STUFF ---
 "---NERDTree
-nmap <leader>p :NERDTreeToggle<cr>
+nmap <leader>n :NERDTreeToggle<cr>
 
 "---bufexplorer
 nmap <leader>b :BufExplorer<cr>
