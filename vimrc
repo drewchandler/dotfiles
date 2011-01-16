@@ -6,6 +6,7 @@ colorscheme wombat
 
 filetype indent plugin on
 syntax on
+set hidden
 
 if has("gui_running")
   set guioptions-=T "No toolbar in gvim
