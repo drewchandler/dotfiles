@@ -31,3 +31,9 @@
 [submodule "vim/bundle/Conque-Shell"]
 	path = vim/bundle/Conque-Shell
 	url = https://github.com/vim-scripts/Conque-Shell.git
+[submodule "vim/bundle/vim-ruby-refactoring"]
+	path = vim/bundle/vim-ruby-refactoring
+	url = https://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "vim/bundle/matchit"]
+	path = vim/bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
