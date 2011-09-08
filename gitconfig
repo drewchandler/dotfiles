@@ -10,5 +10,8 @@
     co = checkout
     lg = "log --pretty=format:'%C(yellow)%h%Creset %s %Cblue%d%Creset' --graph"
     cr = "log --reverse -p --stat origin/master.."
+    crd = "log --reverse -p --stat origin/development.."
 [push]
   default = tracking
+[core]
+	excludesfile = /Users/drew/.gitignore
