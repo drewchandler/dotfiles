@@ -43,6 +43,5 @@ nmap <leader>n :NERDTreeToggle<cr>
 "---bufexplorer
 nmap <leader>b :BufExplorer<cr>
 
-" Allow CommandT plugin to cache a lot of file
+" Allow CommandT plugin to cache a lot of files
 let g:CommandTMaxFiles=50000
-
