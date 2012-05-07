@@ -26,6 +26,19 @@ task :install => [:backup, :remove] do
   end
 end
 
+desc "update vim plugins"
+task :vim_update do
+  bundle_dir = File.join(File.dirname(__FILE__), 'vim/bundle')
+
+  Dir.foreach(bundle_dir) do |submodule_dir|
+    next if submodule_dir.match('^\.')
+
+    Dir.chdir File.join(bundle_dir, submodule_dir) do
+      system 'git pull'
+    end
+  end
+end
+
 def each_entry(&blk)
   Dir.foreach(File.dirname(__FILE__)) do |file|
     yield file, File.join(ENV['HOME'], '.' + file) unless file =~ /^\.|Rakefile/
