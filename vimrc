@@ -45,3 +45,17 @@ nmap <leader>b :BufExplorer<cr>
 
 " Allow CommandT plugin to cache a lot of files
 let g:CommandTMaxFiles=50000
+
+" disable arrow keys
+nmap <up> <nop>
+nmap <down> <nop>
+nmap <left> <nop>
+nmap <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+vmap <up> <nop>
+vmap <down> <nop>
+vmap <left> <nop>
+vmap <right> <nop>
