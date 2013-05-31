@@ -1,0 +1,7 @@
+alias g='git status'
+alias gcm='git commit -m'
+alias gap='git add -p'
+alias gl='git lg'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias retag='ctags -R --exclude .git --exclude tmp/ --exclude log/ .'

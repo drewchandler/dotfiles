@@ -4,14 +4,15 @@
 [color]
     ui=auto
 [alias]
-    st = status
+    st = "!echo \"****** HEY ******\nUse your 'g' alias\""
     ci = commit
     br = branch
     co = checkout
     lg = "log --pretty=format:'%C(yellow)%h%Creset %s %Cblue%d%Creset' --graph"
     cr = "log --reverse -p --stat origin/master.."
     crd = "log --reverse -p --stat origin/development.."
+    pullall = "!git pull && git submodule update --init --recursive"
 [push]
-  default = tracking
+    default = tracking
 [core]
-  excludesfile = /Users/drew/.gitignore
+    excludesfile = /Users/drew/.gitignore
