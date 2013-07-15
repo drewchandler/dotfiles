@@ -37,6 +37,10 @@ nmap <leader>wt :%s/\s\+$//<cr> "Remove trailing whitespace
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
 nmap <leader>p :set paste!<cr>
 
+"Convert ruby hashes to 1.9 syntax
+vmap <leader>h :s/:\([^ ,=]\+\)\s*=>/\1:/g<CR>
+
+
 "--- PLUGIN SPECIFIC STUFF ---
 "---NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
