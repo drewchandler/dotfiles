@@ -1,5 +1,7 @@
 alias g='git status'
+alias gca='git commit --amend'
 alias gcm='git commit -m'
+alias gcf='git commit --fixup'
 alias gap='git add -p'
 alias gl='git lg'
 alias gd='git diff'
