@@ -11,6 +11,8 @@ set hidden
 if has("gui_running")
   set guioptions-=T "No toolbar in gvim
   set guifont=Menlo\ Regular:h12
+  highlight Cursor guifg=#000 guibg=#ff00ee
+  highlight iCursor guifg=#000 guibg=#ff00ee
 endif
 
 set vb "Visual bell
