@@ -50,7 +50,7 @@ vmap <leader>h :s/:\([^ ,=]\+\)\s*=>/\1:/g<CR>
 nmap <leader>b :BufExplorer<cr>
 
 " Clear CommandT cache
-nmap <leader>ct :CommandTFlush<cr>
+nmap <leader>cf :CommandTFlush<cr>
 " Allow CommandT plugin to cache a lot of files
 let g:CommandTMaxFiles=50000
 
