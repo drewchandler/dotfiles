@@ -46,9 +46,6 @@ vmap <leader>h :s/:\([^ ,=]\+\)\s*=>/\1:/g<CR>
 
 
 "--- PLUGIN SPECIFIC STUFF ---
-"---NERDTree
-nmap <leader>n :NERDTreeToggle<cr>
-
 "---bufexplorer
 nmap <leader>b :BufExplorer<cr>
 
