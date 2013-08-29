@@ -61,6 +61,9 @@ let g:CommandTMaxFiles=50000
 " Ack.vim should use the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" Run jshint on save
+au BufWritePost *.js :JSHint
+
 " disable arrow keys
 nmap <up> <nop>
 nmap <down> <nop>
