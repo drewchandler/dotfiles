@@ -1,2 +1,3 @@
 --type-set=coffee=.coffee
 --type-set=handlebars=.hbs
+--ignore-dir=log
