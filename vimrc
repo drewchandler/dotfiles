@@ -58,6 +58,9 @@ nmap <leader>cf :CommandTFlush<cr>
 " Allow CommandT plugin to cache a lot of files
 let g:CommandTMaxFiles=50000
 
+" Ack.vim should use the_silver_searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " disable arrow keys
 nmap <up> <nop>
 nmap <down> <nop>
