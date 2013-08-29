@@ -35,6 +35,10 @@ set shiftwidth=2
 set softtabstop=2
 set list listchars=tab:>-,trail:.,extends:>,precedes:<
 
+"Color column 80 to help show long lines
+set textwidth=80
+set colorcolumn=+1
+
 let mapleader=","
 
 nmap <leader>wt :%s/\s\+$//<cr> "Remove trailing whitespace
