@@ -64,6 +64,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " Run jshint on save
 au BufWritePost *.js :JSHint
 
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
 " disable arrow keys
 nmap <up> <nop>
 nmap <down> <nop>
