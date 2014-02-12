@@ -48,6 +48,7 @@ nmap <leader>p :set paste!<cr>
 "Convert ruby hashes to 1.9 syntax
 vmap <leader>h :s/:\@<!:\([^ ,=:]\+\)\s*=>/\1:/g<CR>
 
+autocmd BufWritePre * :%s/\s\+$//e
 
 "--- PLUGIN SPECIFIC STUFF ---
 "---bufexplorer
