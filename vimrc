@@ -46,7 +46,7 @@ nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
 nmap <leader>p :set paste!<cr>
 
 "Convert ruby hashes to 1.9 syntax
-vmap <leader>h :s/:\([^ ,=]\+\)\s*=>/\1:/g<CR>
+vmap <leader>h :s/:\@<!:\([^ ,=:]\+\)\s*=>/\1:/g<CR>
 
 
 "--- PLUGIN SPECIFIC STUFF ---
