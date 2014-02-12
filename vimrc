@@ -62,10 +62,17 @@ let g:CommandTMaxFiles=50000
 " Ack.vim should use the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" Run jshint on save
-au BufWritePost *.js :JSHint
+let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_jump = 1
+let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
+let g:syntastic_javascript_checkers = ['jshint']
+
+let g:syntastic_eruby_checkers = ['ruby']
 
 " disable arrow keys
 nmap <up> <nop>
