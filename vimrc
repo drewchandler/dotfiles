@@ -76,15 +76,33 @@ let g:syntastic_haskell_checkers = ['hlint']
 au BufNewFile,BufRead *.es6 setf javascript
 
 " disable arrow keys
-nmap <up> <nop>
-nmap <down> <nop>
-nmap <left> <nop>
-nmap <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-vmap <up> <nop>
-vmap <down> <nop>
-vmap <left> <nop>
-vmap <right> <nop>
+function MakeVimUnfriendlyForJosh()
+  nmap <up> <nop>
+  nmap <down> <nop>
+  nmap <left> <nop>
+  nmap <right> <nop>
+  imap <up> <nop>
+  imap <down> <nop>
+  imap <left> <nop>
+  imap <right> <nop>
+  vmap <up> <nop>
+  vmap <down> <nop>
+  vmap <left> <nop>
+  vmap <right> <nop>
+endfunction
+call MakeVimUnfriendlyForJosh()
+
+function MakeVimFriendlyForJosh()
+  nunmap <up>
+  nunmap <down>
+  nunmap <left>
+  nunmap <right>
+  iunmap <up>
+  iunmap <down>
+  iunmap <left>
+  iunmap <right>
+  vunmap <up>
+  vunmap <down>
+  vunmap <left>
+  vunmap <right>
+endfunction
