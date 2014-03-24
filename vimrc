@@ -43,6 +43,7 @@ let mapleader=","
 
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
 nmap <leader>p :set paste!<cr>
+nmap <leader>r :silent !ssh kongregatedev.com "screen -S tests -X stuff 'testunit %'`echo -ne '\015'`"<cr>
 
 "Convert ruby hashes to 1.9 syntax
 vmap <leader>h :s/:\@<!:\([^ ,=:]\+\)\s*=>/\1:/g<CR>
