@@ -74,6 +74,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_eruby_checkers = ['ruby']
 
+au BufNewFile,BufRead *.es6 setf javascript
+
 " disable arrow keys
 nmap <up> <nop>
 nmap <down> <nop>
