@@ -1,5 +1,7 @@
-source ~/.bash/git-completion.bash
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 source ~/.bash/variables.bash
 source ~/.bash/functions.bash
 source ~/.bash/aliases.bash
