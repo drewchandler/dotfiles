@@ -41,7 +41,6 @@ set colorcolumn=+1
 
 let mapleader=","
 
-nmap <leader>wt :%s/\s\+$//<cr> "Remove trailing whitespace
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
 nmap <leader>p :set paste!<cr>
 
