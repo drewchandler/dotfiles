@@ -68,10 +68,9 @@ let g:syntastic_auto_jump = 1
 let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-
-let g:syntastic_javascript_checkers = ['jshint']
-
 let g:syntastic_eruby_checkers = ['ruby']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_haskell_checkers = ['hlint']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
