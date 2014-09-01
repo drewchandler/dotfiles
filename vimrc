@@ -71,6 +71,7 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_eruby_checkers = ['ruby']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_haskell_checkers = ['hlint']
+let g:syntastic_rust_checkers = ['rustc']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
