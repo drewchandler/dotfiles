@@ -22,7 +22,7 @@ set incsearch "Go to the first match as we search
 set nowrap "No line wrapping
 set wildmode=list:longest "Make cmdline tab completion similar to bash
 set wildmenu "Enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore+=tmp/cache/**
+set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*/dist/*
 set showcmd " display incomplete commands
 set ruler " show the cursor position all the time
 set number "show line numbers
