@@ -76,6 +76,7 @@ let g:syntastic_eruby_checkers = ['ruby']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_haskell_checkers = ['hlint']
 let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_coffee_checkers = ['coffeelint']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
