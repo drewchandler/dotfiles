@@ -1,3 +1,6 @@
+export ANDROID_HOME="/Applications/Android Studio.app/sdk"
+
+export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
