@@ -39,6 +39,9 @@ set list listchars=tab:>-,trail:.,extends:>,precedes:<
 set textwidth=80
 set colorcolumn=+1
 
+set backupdir=~/.vim/_backup//    " where to put backup files.
+set directory=~/.vim/_temp//      " where to put swap files.
+
 let mapleader=","
 
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
