@@ -51,7 +51,8 @@ nmap <leader>r :silent !ssh kongregatedev.com "screen -S tests -X stuff 'testuni
 "Convert ruby hashes to 1.9 syntax
 vmap <leader>h :s/:\@<!:\([^ ,=:]\+\)\s*=>/\1:/g<CR>
 
-autocmd BufWritePre * :%s/\s\+$//e
+let whitespace_blacklist = ['diff']
+autocmd BufWritePre * if index(whitespace_blacklist, &ft) < 0 |:%s/\s\+$//e
 
 "--- PLUGIN SPECIFIC STUFF ---
 "---bufexplorer
@@ -73,7 +74,7 @@ let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_eruby_checkers = ['ruby']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 let g:syntastic_haskell_checkers = ['hlint']
 let g:syntastic_rust_checkers = ['rustc']
 let g:syntastic_coffee_checkers = ['coffeelint']
