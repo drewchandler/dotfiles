@@ -16,6 +16,8 @@ export PS1="$YELLOW\$(date +%H:%M) $CYAN[\u@\h \W]$GREEN \$(__git_ps1 '(%s)')\n$
 
 export NODE_PATH=/usr/local/lib/node
 
-export EDITOR='mvim -f'
+export EDITOR='nvim'
+
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 VAULT_DMG=~/vault.dmg
