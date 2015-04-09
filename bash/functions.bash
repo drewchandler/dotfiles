@@ -7,14 +7,6 @@ function sv () {
     unset SECURE_MOUNT_INFO SECURE_MOUNT_PATH SECURE_MOUNT_DEVICE
 }
 
-function v {
-  if [ $# == 0 ]; then
-    mvim
-  else
-    mvim --servername $(basename $(pwd)) --remote-silent "$@" 1>/dev/null 2>&1
-  fi
-}
-
 function stl {
   local SENTINEL_DIRECTORY="/Users/drew/work/kongregate/config/sentinels"
   if [ -n "$1" ]; then
