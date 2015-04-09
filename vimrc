@@ -12,10 +12,12 @@ if has("gui_running")
   set guioptions-=T "No toolbar in gvim
   set guioptions-=r "No right scrollbar
   set guioptions-=L "No right scrollbar
-  set guifont=Menlo\ Regular:h12
+  set guifont=Sauce\ Code\ for\ Powerline\ Regular:h12
   highlight Cursor guifg=#000 guibg=#ff00ee
   highlight iCursor guifg=#000 guibg=#ff00ee
 endif
+
+let g:airline_powerline_fonts = 1
 
 set vb "Visual bell
 set incsearch "Go to the first match as we search
