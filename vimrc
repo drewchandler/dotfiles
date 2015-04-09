@@ -57,10 +57,8 @@ autocmd BufWritePre * if index(whitespace_blacklist, &ft) < 0 |:%s/\s\+$//e
 "---bufexplorer
 nmap <leader>b :BufExplorer<cr>
 
-" Clear CommandT cache
-nmap <leader>cf :CommandTFlush<cr>
-" Allow CommandT plugin to cache a lot of files
-let g:CommandTMaxFiles=50000
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Ack.vim should use the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
