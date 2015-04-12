@@ -44,6 +44,8 @@ set colorcolumn=+1
 set backupdir=~/.vim/_backup//    " where to put backup files.
 set directory=~/.vim/_temp//      " where to put swap files.
 
+set backspace=2
+
 let mapleader=","
 
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
