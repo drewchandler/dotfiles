@@ -50,7 +50,6 @@ let mapleader=","
 
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
 nmap <leader>p :set paste!<cr>
-nmap <leader>r :silent !ssh kongregatedev.com "screen -S work -p 1 -X stuff 'testunit %'`echo -ne '\015'`"<cr>
 
 "Convert ruby hashes to 1.9 syntax
 vmap <leader>h :s/:\@<!:\([^ ,=:]\+\)\s*=>/\1:/g<CR>
@@ -83,11 +82,7 @@ let g:syntastic_coffee_checkers = ['coffeelint']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
-au FileType ruby map <Leader>r :call RunCurrentSpecFile()<CR>
-au FileType ruby map <Leader>s :call RunNearestSpec()<CR>
-au FileType ruby map <Leader>l :call RunLastSpec()<CR>
-au FileType ruby map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+nmap <leader>r :call Send_to_Tmux("testunit " . expand("%") . "\n")<CR>
 
 " disable arrow keys
 function MakeVimUnfriendlyForJosh()
