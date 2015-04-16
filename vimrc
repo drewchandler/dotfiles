@@ -81,6 +81,12 @@ let g:syntastic_rust_checkers = ['rustc']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
+au FileType ruby map <Leader>r :call RunCurrentSpecFile()<CR>
+au FileType ruby map <Leader>s :call RunNearestSpec()<CR>
+au FileType ruby map <Leader>l :call RunLastSpec()<CR>
+au FileType ruby map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
 " disable arrow keys
 nmap <up> <nop>
 nmap <down> <nop>
