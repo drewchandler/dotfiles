@@ -44,6 +44,8 @@ set colorcolumn=+1
 set backupdir=~/.vim/_backup//    " where to put backup files.
 set directory=~/.vim/_temp//      " where to put swap files.
 
+set backspace=2
+
 let mapleader=","
 
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
@@ -80,6 +82,12 @@ let g:syntastic_rust_checkers = ['rustc']
 let g:syntastic_coffee_checkers = ['coffeelint']
 
 au BufNewFile,BufRead *.es6 setf javascript
+
+au FileType ruby map <Leader>r :call RunCurrentSpecFile()<CR>
+au FileType ruby map <Leader>s :call RunNearestSpec()<CR>
+au FileType ruby map <Leader>l :call RunLastSpec()<CR>
+au FileType ruby map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 " disable arrow keys
 function MakeVimUnfriendlyForJosh()
