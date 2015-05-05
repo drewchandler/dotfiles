@@ -102,6 +102,10 @@
 	path = vim/bundle/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
 	ignore = dirty
+[submodule "vim/bundle/vim-fireplace"]
+	path = vim/bundle/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace.git
+	ignore = dirty
 [submodule "vim/bundle/paredit.vim"]
 	path = vim/bundle/paredit.vim
 	url = https://github.com/vim-scripts/paredit.vim.git
