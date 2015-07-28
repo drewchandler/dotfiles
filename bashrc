@@ -5,3 +5,7 @@ fi
 source ~/.bash/variables.bash
 source ~/.bash/functions.bash
 source ~/.bash/aliases.bash
+
+for f in ~/.bash/completion/*.bash; do
+  source $f
+done
