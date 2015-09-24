@@ -6,3 +6,12 @@ function sv () {
     hdiutil eject $SECURE_MOUNT_DEVICE &> /dev/null;
     unset SECURE_MOUNT_INFO SECURE_MOUNT_PATH SECURE_MOUNT_DEVICE
 }
+
+function gri () {
+  git rebase -i $1~
+}
+
+function gcfri () {
+  git commit --fixup $1
+  gri $1
+}
