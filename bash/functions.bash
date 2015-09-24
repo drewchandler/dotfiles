@@ -34,3 +34,12 @@ function _stl
 }
 
 complete -F _stl stl
+
+function gri () {
+  git rebase -i $1~
+}
+
+function gcfri () {
+  git commit --fixup $1
+  gri $1
+}
