@@ -39,6 +39,13 @@ task :vim_update do
   end
 end
 
+desc "symlink nvim config"
+task :nvim_symlink do
+  system 'mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}'
+  system 'ln -s ~/.vim ${XDG_CONFIG_HOME:=$HOME/.config}/nvim'
+  system 'ln -s ~/.vimrc ${XDG_CONFIG_HOME:=$HOME/.config}/nvim/init.vim'
+end
+
 def each_entry(&blk)
   Dir.foreach(File.dirname(__FILE__)) do |file|
     yield file, File.join(ENV['HOME'], '.' + file) unless file =~ /^\.|Rakefile/
