@@ -29,6 +29,7 @@ set showcmd " display incomplete commands
 set ruler " show the cursor position all the time
 set number "show line numbers
 set laststatus=2
+set nohlsearch
 
 set expandtab "use spaces instead of tabstops
 set smarttab
@@ -67,18 +68,23 @@ let g:ctrlp_cmd = 'CtrlP'
 " Ack.vim should use the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-let g:syntastic_check_on_open = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_auto_jump = 1
-let g:syntastic_aggregate_errors = 1
+autocmd! BufReadPost,BufWritePost * Neomake
 
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_eruby_checkers = ['ruby']
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_haskell_checkers = ['hlint']
-let g:syntastic_rust_checkers = ['rustc']
-let g:syntastic_coffee_checkers = ['coffeelint']
+let g:neomake_open_list = 2
+let g:neomake_error_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'ErrorMsg',
+            \ }
+let g:neomake_warning_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'Todo',
+            \ }
+
+let g:neomake_ruby_makers = ['mri', 'rubocop']
+let g:neomake_javascript_makers = ['jshint']
+let g:neomake_haskell_makers = ['hlint']
+let g:neomake_rust_makers = ['rustc']
+let g:neomake_coffee_makers = ['coffeelint']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
