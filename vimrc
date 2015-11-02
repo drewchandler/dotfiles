@@ -29,6 +29,7 @@ set showcmd " display incomplete commands
 set ruler " show the cursor position all the time
 set number "show line numbers
 set laststatus=2
+set nohlsearch
 
 set expandtab "use spaces instead of tabstops
 set smarttab
