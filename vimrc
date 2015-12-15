@@ -80,11 +80,11 @@ let g:neomake_warning_sign = {
             \ 'texthl': 'Todo',
             \ }
 
-let g:neomake_ruby_makers = ['mri', 'rubocop']
-let g:neomake_javascript_makers = ['jshint']
-let g:neomake_haskell_makers = ['hlint']
-let g:neomake_rust_makers = ['rustc']
-let g:neomake_coffee_makers = ['coffeelint']
+let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
+let g:neomake_javascript_enabled_makers = ['jshint', 'jscs']
+let g:neomake_haskell_enabled_makers = ['hlint']
+let g:neomake_rust_enabled_makers = ['rustc']
+let g:neomake_coffee_enabled_makers = ['coffeelint']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
