@@ -2,6 +2,7 @@ call pathogen#infect()
 
 set nocompatible
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme wombat
 
 filetype indent plugin on
