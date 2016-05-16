@@ -30,10 +30,13 @@ desc "update vim plugins"
 task :vim_update do
   bundle_dir = File.join(File.dirname(__FILE__), 'vim/bundle')
 
-  Dir.foreach(bundle_dir) do |submodule_dir|
-    next if submodule_dir.match('^\.')
+  Dir.foreach(bundle_dir) do |entry|
+    next if entry.match('^\.')
 
-    Dir.chdir File.join(bundle_dir, submodule_dir) do
+    path = File.join(bundle_dir, entry)
+    next unless File.directory?(path)
+
+    Dir.chdir path do
       system 'git pull'
     end
   end
