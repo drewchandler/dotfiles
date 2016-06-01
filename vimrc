@@ -1,4 +1,5 @@
 call pathogen#infect()
+set rtp+=/usr/local/opt/fzf
 
 set nocompatible
 
@@ -63,9 +64,7 @@ autocmd BufWritePre * if index(whitespace_blacklist, &ft) < 0 |:%s/\s\+$//e
 "---bufexplorer
 nmap <leader>b :BufExplorer<cr>
 
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = 'tmp\|bower_components\|node_modules\|DS_Store\|git'
+nmap <leader>t :Files<CR>
 
 " Ack.vim should use the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
