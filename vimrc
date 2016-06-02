@@ -1,5 +1,39 @@
-call pathogen#infect()
-set rtp+=/usr/local/opt/fzf
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-rails'
+Plug 'vim-scripts/bufexplorer.zip'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tsaleh/vim-align'
+Plug 'ervandew/supertab'
+Plug 'vim-scripts/taglist.vim'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'vim-scripts/matchit.zip'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-dispatch'
+Plug 'nono/vim-handlebars'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-eunuch'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-ruby/vim-ruby'
+Plug 'heartsentwined/vim-ember-script'
+Plug 'heartsentwined/vim-emblem'
+Plug 'wting/rust.vim'
+Plug 'bling/vim-airline'
+Plug 'othree/yajs.vim'
+Plug 'jgdavey/tslime.vim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-fireplace'
+Plug 'vim-scripts/paredit.vim'
+Plug 'benekastah/neomake'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'cespare/vim-toml'
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug '/usr/local/opt/fzf'
+
+call plug#end()
 
 set nocompatible
 
