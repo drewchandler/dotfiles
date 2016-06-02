@@ -87,6 +87,7 @@ let g:neomake_haskell_enabled_makers = ['hlint']
 let g:neomake_rust_enabled_makers = ['rustc']
 let g:neomake_coffee_enabled_makers = ['coffeelint']
 let g:neomake_scss_enabled_makers = ['scsslint']
+let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
 
 au BufNewFile,BufRead *.es6 setf javascript
 
