@@ -21,6 +21,7 @@ export NODE_PATH=/usr/local/lib/node
 
 export EDITOR='nvim'
 
+export TERM=xterm-256color
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 VAULT_DMG=~/vault.dmg
