@@ -24,4 +24,9 @@ export EDITOR='nvim'
 export TERM=xterm-256color
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+export FZF_DEFAULT_COMMAND='
+  (git ls-tree -r --name-only HEAD ||
+   find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
+      sed s/^..//) 2> /dev/null'
+
 VAULT_DMG=~/vault.dmg
