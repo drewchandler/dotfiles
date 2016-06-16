@@ -1,10 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-rails'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'tsaleh/vim-align'
 Plug 'ervandew/supertab'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/matchit.zip'
@@ -119,6 +119,10 @@ let g:neomake_rust_enabled_makers = ['rustc']
 let g:neomake_coffee_enabled_makers = ['coffeelint']
 let g:neomake_scss_enabled_makers = ['scsslint']
 let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
+
+" easy-align
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 au BufNewFile,BufRead *.es6 setf javascript
 
