@@ -29,6 +29,7 @@ Plug 'cespare/vim-toml'
 Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf'
+Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
 
 call plug#end()
 
