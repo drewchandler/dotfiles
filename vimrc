@@ -1,10 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-rails'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'tsaleh/vim-align'
 Plug 'ervandew/supertab'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/matchit.zip'
@@ -13,7 +13,6 @@ Plug 'tpope/vim-surround'
 Plug 'nono/vim-handlebars'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-eunuch'
-Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'heartsentwined/vim-ember-script'
 Plug 'heartsentwined/vim-emblem'
@@ -29,6 +28,7 @@ Plug 'cespare/vim-toml'
 Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf'
+Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
 
 call plug#end()
 
@@ -118,6 +118,10 @@ let g:neomake_haskell_enabled_makers = ['hlint']
 let g:neomake_rust_enabled_makers = ['rustc']
 let g:neomake_coffee_enabled_makers = ['coffeelint']
 let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
+
+" easy-align
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 au BufNewFile,BufRead *.es6 setf javascript
 
