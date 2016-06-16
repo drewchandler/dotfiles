@@ -18,3 +18,5 @@
     excludesfile = /Users/drew/.gitignore
 [rebase]
     autosquash = true
+[diff]
+	compactionHeuristic = true
