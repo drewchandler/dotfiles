@@ -5,7 +5,6 @@ Plug 'tpope/vim-rails'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'ervandew/supertab'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'mileszs/ack.vim'
@@ -29,6 +28,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf'
 Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'racer-rust/vim-racer'
+Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
@@ -131,6 +137,17 @@ au FileType ruby map <Leader>s :call RunNearestSpec()<CR>
 au FileType ruby map <Leader>l :call RunLastSpec()<CR>
 au FileType ruby map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
+autocmd CompleteDone * pclose
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#omni#input_patterns = {}
+let g:deoplete#omni#input_patterns.cs = '.*[^=\);]'
+
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+let g:racer_cmd = expand('~/.cargo/bin/racer')
+let $RUST_SRC_PATH = expand('~/work/rust/src/')
 
 " disable arrow keys
 nmap <up> <nop>
