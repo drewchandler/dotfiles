@@ -35,6 +35,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'racer-rust/vim-racer'
 Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
 Plug 'tpope/vim-dispatch'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -148,6 +149,8 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 let g:racer_cmd = expand('~/.cargo/bin/racer')
 let $RUST_SRC_PATH = expand('~/work/rust/src/')
+
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " disable arrow keys
 nmap <up> <nop>
