@@ -19,7 +19,7 @@ task :remove do
   end
 end
 
-desc 'install all the rcfile into home'
+desc 'install all the rcfiles into home'
 task install: [:backup, :remove] do
   each_entry do |src_file, dst_file|
     puts "Creating symlink from #{dst_file} to #{src_file}" if ENV['VERBOSE']
