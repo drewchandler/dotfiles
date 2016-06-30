@@ -27,22 +27,6 @@ task install: [:backup, :remove] do
   end
 end
 
-desc 'update vim plugins'
-task :vim_update do
-  bundle_dir = File.join(File.dirname(__FILE__), 'vim/bundle')
-
-  Dir.foreach(bundle_dir) do |entry|
-    next if entry.match('^\.')
-
-    path = File.join(bundle_dir, entry)
-    next unless File.directory?(path)
-
-    Dir.chdir path do
-      system 'git pull'
-    end
-  end
-end
-
 desc 'symlink nvim config'
 task :nvim_symlink do
   system 'mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}'
