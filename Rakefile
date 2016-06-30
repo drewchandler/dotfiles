@@ -1,9 +1,10 @@
 desc 'backup rcfiles'
 task :backup do
+  timestamp = Time.now.strftime('%Y%m%d%H%M%S')
   each_entry do |_src_file, dst_file|
     if File.exist?(dst_file) && !File.lstat(dst_file).symlink?
       puts "Backing up #{dst_file}" if ENV['VERBOSE']
-      File.rename(dst_file, dst_file + '.' + Time.now.strftime('%Y%m%d%H%M%S'))
+      File.rename(dst_file, dst_file + '.' + timestamp)
     end
   end
 end
