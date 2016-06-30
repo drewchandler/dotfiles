@@ -5,7 +5,6 @@ Plug 'tpope/vim-rails'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'ervandew/supertab'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'mileszs/ack.vim'
@@ -29,6 +28,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf'
 Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'racer-rust/vim-racer'
+Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
+Plug 'tpope/vim-dispatch'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -126,6 +133,19 @@ xmap ga <Plug>(EasyAlign)
 au BufNewFile,BufRead *.es6 setf javascript
 
 nmap <leader>r :call Send_to_Tmux("testunit " . expand("%") . "\n")<CR>
+
+autocmd CompleteDone * pclose
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#omni#input_patterns = {}
+let g:deoplete#omni#input_patterns.cs = '.*[^=\);]'
+
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+let g:racer_cmd = expand('~/.cargo/bin/racer')
+let $RUST_SRC_PATH = expand('~/work/rust/src/')
+
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " disable arrow keys
 function MakeVimUnfriendlyForJosh()

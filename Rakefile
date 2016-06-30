@@ -1,9 +1,10 @@
 desc 'backup rcfiles'
 task :backup do
+  timestamp = Time.now.strftime('%Y%m%d%H%M%S')
   each_entry do |_src_file, dst_file|
     if File.exist?(dst_file) && !File.lstat(dst_file).symlink?
       puts "Backing up #{dst_file}" if ENV['VERBOSE']
-      File.rename(dst_file, dst_file + '.' + Time.now.strftime('%Y%m%d%H%M%S'))
+      File.rename(dst_file, dst_file + '.' + timestamp)
     end
   end
 end
@@ -18,27 +19,11 @@ task :remove do
   end
 end
 
-desc 'install all the rcfile into home'
+desc 'install all the rcfiles into home'
 task install: [:backup, :remove] do
   each_entry do |src_file, dst_file|
     puts "Creating symlink from #{dst_file} to #{src_file}" if ENV['VERBOSE']
     File.symlink(File.expand_path(src_file), dst_file)
-  end
-end
-
-desc 'update vim plugins'
-task :vim_update do
-  bundle_dir = File.join(File.dirname(__FILE__), 'vim/bundle')
-
-  Dir.foreach(bundle_dir) do |entry|
-    next if entry.match('^\.')
-
-    path = File.join(bundle_dir, entry)
-    next unless File.directory?(path)
-
-    Dir.chdir path do
-      system 'git pull'
-    end
   end
 end
 
