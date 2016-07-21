@@ -18,7 +18,6 @@ Plug 'heartsentwined/vim-emblem'
 Plug 'rust-lang/rust.vim'
 Plug 'bling/vim-airline'
 Plug 'jgdavey/tslime.vim'
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-fireplace'
 Plug 'vim-scripts/paredit.vim'
 Plug 'benekastah/neomake'
@@ -36,6 +35,7 @@ Plug 'racer-rust/vim-racer'
 Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
 Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'janko-m/vim-test'
 
 call plug#end()
 
@@ -132,8 +132,6 @@ xmap ga <Plug>(EasyAlign)
 
 au BufNewFile,BufRead *.es6 setf javascript
 
-nmap <leader>r :call Send_to_Tmux("testunit " . expand("%") . "\n")<CR>
-
 autocmd CompleteDone * pclose
 
 let g:deoplete#enable_at_startup = 1
@@ -144,6 +142,15 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 let g:racer_cmd = expand('~/.cargo/bin/racer')
 let $RUST_SRC_PATH = expand('~/work/rust/src/')
+
+let g:rustfmt_autosave = 1
+
+let test#strategy = 'tslime'
+nmap <silent> <Leader>r :TestNearest<CR>
+nmap <silent> <Leader>R :TestFile<CR>
+nmap <silent> <Leader>a :TestSuite<CR>
+nmap <silent> <Leader>l :TestLast<CR>
+nmap <silent> <Leader>g :TestVisit<CR>
 
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
