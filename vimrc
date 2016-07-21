@@ -150,6 +150,8 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 let g:racer_cmd = expand('~/.cargo/bin/racer')
 let $RUST_SRC_PATH = expand('~/work/rust/src/')
 
+let g:rustfmt_autosave = 1
+
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " disable arrow keys
