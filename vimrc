@@ -152,6 +152,14 @@ nmap <silent> <Leader>a :TestSuite<CR>
 nmap <silent> <Leader>l :TestLast<CR>
 nmap <silent> <Leader>g :TestVisit<CR>
 
+function! test#ruby#minitest#executable() abort
+  return 'bundle exec ruby bin/testunit'
+endfunction
+
+function! test#strategy#tslime(cmd) abort
+  call Send_to_Tmux(a:cmd."\n")
+endfunction
+
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " disable arrow keys
