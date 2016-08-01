@@ -14,8 +14,6 @@ GREEN='\[\033[32m\]'
 WHITE='\[\033[37m\]'
 export PS1="$YELLOW\$(date +%H:%M) $CYAN[\u@\h \W]$GREEN \$(__git_ps1 '(%s)')\n$WHITE\$ "
 
-export NODE_PATH=/usr/local/lib/node
-
 export EDITOR='nvim'
 
 export TERM=xterm-256color
