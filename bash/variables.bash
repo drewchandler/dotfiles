@@ -2,6 +2,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$HOME/.yarn/bin:$PATH
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
