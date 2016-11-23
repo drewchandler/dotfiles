@@ -38,6 +38,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-unimpaired'
 Plug 'wombat256.vim'
+Plug 'elmcast/elm-vim'
 
 call plug#end()
 
@@ -147,6 +148,8 @@ let g:racer_cmd = expand('~/.cargo/bin/racer')
 let $RUST_SRC_PATH = expand('~/work/rust/src/')
 
 let g:rustfmt_autosave = 1
+
+let g:elm_format_autosave = 1
 
 let test#strategy = 'tslime'
 nmap <silent> <Leader>r :TestNearest<CR>
