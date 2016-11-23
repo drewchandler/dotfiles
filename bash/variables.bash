@@ -20,4 +20,6 @@ export EDITOR='nvim'
 export TERM=xterm-256color
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
+
 VAULT_DMG=~/vault.dmg
