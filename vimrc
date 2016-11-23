@@ -37,13 +37,14 @@ Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-unimpaired'
+Plug 'wombat256.vim'
 
 call plug#end()
 
 set nocompatible
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme wombat
+colorscheme wombat256mod
 
 filetype indent plugin on
 syntax on
