@@ -5,6 +5,8 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$HOME/.yarn/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
@@ -22,9 +24,6 @@ export EDITOR='nvim'
 export TERM=xterm-256color
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-export FZF_DEFAULT_COMMAND='
-  (git ls-tree -r --name-only HEAD ||
-   find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
-      sed s/^..//) 2> /dev/null'
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
 
 VAULT_DMG=~/vault.dmg
