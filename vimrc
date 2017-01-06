@@ -30,7 +30,7 @@ Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'racer-rust/vim-racer'
 Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
 Plug 'tpope/vim-dispatch'
