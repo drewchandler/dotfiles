@@ -30,7 +30,7 @@ Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'racer-rust/vim-racer'
 Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
 Plug 'tpope/vim-dispatch'
@@ -122,6 +122,10 @@ let g:neomake_warning_sign = {
             \ 'texthl': 'Todo',
             \ }
 
+let g:neomake_rust_rustc__maker = {
+  \ 'args': ['--', '-Zno-trans']
+  \ }
+
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_haskell_enabled_makers = ['hlint']
@@ -142,9 +146,6 @@ let g:deoplete#omni#input_patterns = {}
 let g:deoplete#omni#input_patterns.cs = '.*[^=\);]'
 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-let g:racer_cmd = expand('~/.cargo/bin/racer')
-let $RUST_SRC_PATH = expand('~/work/rust/src/')
 
 let g:rustfmt_autosave = 1
 
