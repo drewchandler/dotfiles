@@ -111,6 +111,7 @@ nmap <leader>t :Files<CR>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 autocmd! BufReadPost,BufWritePost * Neomake
+autocmd BufWritePost *.rs Neomake! cargo
 
 let g:neomake_open_list = 2
 let g:neomake_error_sign = {
@@ -122,14 +123,11 @@ let g:neomake_warning_sign = {
             \ 'texthl': 'Todo',
             \ }
 
-let g:neomake_rust_rustc__maker = {
-  \ 'args': ['--', '-Zno-trans']
-  \ }
-
+let g:neomake_enabled_makers = ['cargo']
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_haskell_enabled_makers = ['hlint']
-let g:neomake_rust_enabled_makers = ['rustc']
+let g:neomake_rust_enabled_makers = []
 let g:neomake_coffee_enabled_makers = ['coffeelint']
 let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
 
