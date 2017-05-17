@@ -6,9 +6,12 @@ tap 'neovim/neovim'
 
 cask 'alfred'
 cask 'dash'
+cask 'flux'
+cask 'font-source-code-pro-for-powerline'
 cask 'google-chrome'
 cask 'iterm2-nightly'
-cask 'font-source-code-pro-for-powerline'
+cask 'postgres'
+cask 'spotify'
 
 brew 'ack'
 brew 'bash-completion'
