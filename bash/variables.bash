@@ -16,7 +16,11 @@ GREEN='\[\033[32m\]'
 WHITE='\[\033[37m\]'
 export PS1="$YELLOW\$(date +%H:%M) $CYAN[\u@\h \W]$GREEN \$(__git_ps1 '(%s)')\n$WHITE\$ "
 
-export EDITOR='nvim'
+if which nvim &> /dev/null; then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
 
 export TERM=xterm-256color
 export NVIM_TUI_ENABLE_TRUE_COLOR=1

@@ -14,4 +14,4 @@ alias srb='grb | fzf | xargs git co'
 alias retag='ctags -R --exclude .git --exclude tmp/ --exclude log/ .'
 alias nom='rm -rf node_modules && npm cache clear && npm install'
 alias bom='rm -rf bower_components && bower cache clean && bower install'
-alias v='nvim'
+alias v=$EDITOR
