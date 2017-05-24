@@ -27,10 +27,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf'
 Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
 Plug 'racer-rust/vim-racer'
 Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
 Plug 'tpope/vim-dispatch'
@@ -140,9 +139,11 @@ au BufNewFile,BufRead *.es6 setf javascript
 
 autocmd CompleteDone * pclose
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#omni#input_patterns = {}
-let g:deoplete#omni#input_patterns.cs = '.*[^=\);]'
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#omni#input_patterns = {}
+  let g:deoplete#omni#input_patterns.cs = '.*[^=\);]'
+endif
 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
