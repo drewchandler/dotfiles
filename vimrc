@@ -29,6 +29,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 endif
 Plug 'racer-rust/vim-racer'
 Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
