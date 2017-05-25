@@ -16,3 +16,4 @@ done
 [ -f ~/.cargo/env ] && source ~/.cargo/env
 if which rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
 if which nodenv &> /dev/null; then eval "$(nodenv init -)"; fi
+if which pyenv &> /dev/null; then eval "$(pyenv init -)"; fi
