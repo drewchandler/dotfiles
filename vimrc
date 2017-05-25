@@ -25,7 +25,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'cespare/vim-toml'
 Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
-Plug '/usr/local/opt/fzf'
+if filereadable(expand('~/.fzf/plugin/fzf.vim'))
+  Plug '~/.fzf'
+else
+  Plug '/usr/local/opt/fzf'
+endif
 Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
