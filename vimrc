@@ -94,6 +94,9 @@ set directory=~/.vim/_temp//      " where to put swap files.
 
 set backspace=2
 
+let g:python_host_prog = expand('~/.pyenv/versions/py2neovim/bin/python')
+let g:python3_host_prog = expand('~/.pyenv/versions/py3neovim/bin/python')
+
 let mapleader=","
 
 nmap <leader>rt :!ctags --extra=+f -R *<cr><cr>
