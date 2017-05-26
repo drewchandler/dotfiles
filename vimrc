@@ -145,6 +145,8 @@ xmap ga <Plug>(EasyAlign)
 
 au BufNewFile,BufRead *.es6 setf javascript
 
+au FileType python setl ts=8 et sw=4 sts=4
+
 autocmd CompleteDone * pclose
 
 if has('nvim')
