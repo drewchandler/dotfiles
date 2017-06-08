@@ -43,6 +43,7 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-unimpaired'
 Plug 'wombat256.vim'
 Plug 'elmcast/elm-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
