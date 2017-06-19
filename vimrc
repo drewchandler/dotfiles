@@ -20,7 +20,7 @@ Plug 'bling/vim-airline'
 Plug 'jgdavey/tslime.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'vim-scripts/paredit.vim'
-Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cespare/vim-toml'
 Plug 'junegunn/fzf.vim'
@@ -110,6 +110,12 @@ let whitespace_blacklist = ['diff']
 autocmd BufWritePre * if index(whitespace_blacklist, &ft) < 0 |:%s/\s\+$//e
 
 "--- PLUGIN SPECIFIC STUFF ---
+let g:ale_open_list = 1
+let g:ale_fixers = {
+  \ 'javascript': ['eslint']
+  \ }
+nmap <leader>d <Plug>(ale_fix)
+
 "---bufexplorer
 nmap <leader>b :BufExplorer<cr>
 
@@ -117,28 +123,6 @@ nmap <leader>t :Files<CR>
 
 " Ack.vim should use the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-autocmd! BufReadPost,BufWritePost * Neomake
-autocmd BufWritePost *.rs Neomake! cargo
-
-let g:neomake_open_list = 2
-let g:neomake_error_sign = {
-            \ 'text': '>>',
-            \ 'texthl': 'ErrorMsg',
-            \ }
-let g:neomake_warning_sign = {
-            \ 'text': '>>',
-            \ 'texthl': 'Todo',
-            \ }
-
-let g:neomake_enabled_makers = ['cargo']
-let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_haskell_enabled_makers = ['hlint']
-let g:neomake_rust_enabled_makers = []
-let g:neomake_coffee_enabled_makers = ['coffeelint']
-let g:neomake_scss_enabled_makers = ['scsslint']
-let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
 
 " easy-align
 nmap ga <Plug>(EasyAlign)
