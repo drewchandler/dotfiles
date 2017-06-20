@@ -44,6 +44,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'wombat256.vim'
 Plug 'elmcast/elm-vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
 call plug#end()
 
