@@ -113,8 +113,8 @@ autocmd BufWritePre * if index(whitespace_blacklist, &ft) < 0 |:%s/\s\+$//e
 "--- PLUGIN SPECIFIC STUFF ---
 let g:ale_open_list = 1
 let g:ale_fixers = {
-  \ 'javascript': ['eslint']
-  \ }
+  \ 'javascript': ['eslint'],
+  \ 'python': ['flake8']}
 nmap <leader>d <Plug>(ale_fix)
 
 "---bufexplorer
