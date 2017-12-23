@@ -3,6 +3,7 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.yarn/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
 export GIT_PS1_SHOWDIRTYSTATE=1
