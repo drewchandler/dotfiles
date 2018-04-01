@@ -44,4 +44,4 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
 brew 'wget'
-brew 'yarn'
+brew 'yarn', args: ['without-node']
