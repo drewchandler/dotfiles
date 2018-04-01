@@ -119,7 +119,8 @@ let g:ale_lint_on_save = 1
 let g:ale_fixers = {
   \ 'javascript': ['eslint'],
   \ 'typescript': ['tslint'],
-  \ 'python': ['flake8']}
+  \ 'python': ['flake8'],
+  \ 'ruby': ['rubocop']}
 nmap <leader>d <Plug>(ale_fix)
 
 "---bufexplorer
