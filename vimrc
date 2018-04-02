@@ -36,7 +36,6 @@ if has('nvim')
   Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 endif
 Plug 'racer-rust/vim-racer'
-Plug 'OmniSharp/omnisharp-vim', { 'do': 'cd server && xbuild' }
 Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'janko-m/vim-test'
