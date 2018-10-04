@@ -13,8 +13,6 @@ Plug 'nono/vim-handlebars'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-eunuch'
 Plug 'vim-ruby/vim-ruby'
-Plug 'heartsentwined/vim-ember-script'
-Plug 'heartsentwined/vim-emblem'
 Plug 'rust-lang/rust.vim'
 Plug 'bling/vim-airline'
 Plug 'jgdavey/tslime.vim'
@@ -32,15 +30,16 @@ else
 endif
 Plug 'rizzatti/dash.vim',  { 'on': 'Dash' }
 if has('nvim')
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 endif
 Plug 'racer-rust/vim-racer'
 Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-unimpaired'
-Plug 'wombat256.vim'
+Plug 'vim-scripts/wombat256.vim'
 Plug 'elmcast/elm-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
@@ -98,6 +97,7 @@ set backspace=2
 
 let g:python_host_prog = expand('~/.pyenv/versions/py2neovim/bin/python')
 let g:python3_host_prog = expand('~/.pyenv/versions/py3neovim/bin/python')
+let g:ruby_host_prog = expand('~/.rbenv/versions/2.5.1/bin/neovim-ruby-host')
 
 let mapleader=","
 
@@ -115,11 +115,15 @@ let g:ale_open_list = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
+let g:ale_linters = {
+  \ 'python': ['flake8'],
+  \ 'html': []}
 let g:ale_fixers = {
   \ 'javascript': ['eslint'],
   \ 'typescript': ['tslint'],
-  \ 'python': ['flake8'],
-  \ 'ruby': ['rubocop']}
+  \ 'python': ['autopep8'],
+  \ 'ruby': ['rubocop'],
+  \ 'rust': ['rustfmt']}
 nmap <leader>d <Plug>(ale_fix)
 
 "---bufexplorer
