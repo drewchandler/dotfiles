@@ -15,8 +15,7 @@ done
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.cargo/env ] && source ~/.cargo/env
 if which rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
-if which nodenv &> /dev/null; then eval "$(nodenv init -)"; fi
 if which pyenv &> /dev/null; then
   eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
 fi
+if which nodenv &> /dev/null; then eval "$(nodenv init -)"; fi
